@@ -22,11 +22,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         imageButton = findViewById(R.id.imageButton3);
         imageButton.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
                 if (!flashlightStateChanged) {
                     try {
                         String cameraIdForFlashlight = cameraManager.getCameraIdList()[0];
+                        cameraManager.setTorchMode(cameraIdForFlashlight, true);
                     } catch (CameraAccessException exception) {
                         System.out.println(exception);
                     }
