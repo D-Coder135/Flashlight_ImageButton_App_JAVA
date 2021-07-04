@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-    ImageButton imageButton;
-    CameraManager cameraManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
