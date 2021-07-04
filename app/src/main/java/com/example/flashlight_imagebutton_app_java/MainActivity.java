@@ -3,6 +3,7 @@ package com.example.flashlight_imagebutton_app_java;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 if (!flashlightStateChanged) {
                     try {
                         String cameraIdForFlashlight = cameraManager.getCameraIdList()[0];
-                    } catch () {
+                    } catch (CameraAccessException exception) {
                     }
                 }
             }
