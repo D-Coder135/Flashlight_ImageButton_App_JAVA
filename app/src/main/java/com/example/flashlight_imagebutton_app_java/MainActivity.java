@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                         imageButton.setImageResource(R.drawable.on);
                         flashlightStateChanged = true;
                     } catch (CameraAccessException exception) {
-                        System.out.println(exception);
+//                        System.out.println(exception);
                     }
                 } else {
                     try {
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                         imageButton.setImageResource(R.drawable.off);
                         flashlightStateChanged = false;
                     } catch (CameraAccessException exception) {
-                        System.out.println(exception);
+//                        System.out.println(exception);
                     }
                 }
             }
