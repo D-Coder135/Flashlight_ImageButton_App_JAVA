@@ -9,11 +9,13 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity {
     ImageButton imageButton;
     CameraManager cameraManager;
+    private boolean flashlightStateChanged = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imageButton = findViewById(R.id.imageButton3);
+
     }
 }
