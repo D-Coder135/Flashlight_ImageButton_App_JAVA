@@ -9,9 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public class MainActivity extends AppCompatActivity {
     ImageButton imageButton;
-    CameraManager cameraManager;
+    CameraManager cameraManager = (CameraManager)getSystemService(CAMERA_SERVICE);
     private boolean flashlightStateChanged = false;
 
     @Override
@@ -20,12 +21,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         imageButton = findViewById(R.id.imageButton3);
         imageButton.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 if (!flashlightStateChanged) {
                     try {
-                        cameraManager = (CameraManager)getSystemService(CAMERA_SERVICE);
+
                     } catch () {
                     }
                 }
