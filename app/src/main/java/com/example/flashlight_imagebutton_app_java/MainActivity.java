@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
                     try {
                         String cameraIdForFlashlight = cameraManager.getCameraIdList()[0];
                         cameraManager.setTorchMode(cameraIdForFlashlight, true);
+                        imageButton.setImageResource(R.drawable.on);
                     } catch (CameraAccessException exception) {
                         System.out.println(exception);
                     }
