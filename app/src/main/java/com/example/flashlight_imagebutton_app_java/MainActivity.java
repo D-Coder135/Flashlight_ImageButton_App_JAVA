@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!flashlightStateChanged) {
                     try {
-
+                        String cameraIdForFlashlight = cameraManager.getCameraIdList()[0];
                     } catch () {
                     }
                 }
