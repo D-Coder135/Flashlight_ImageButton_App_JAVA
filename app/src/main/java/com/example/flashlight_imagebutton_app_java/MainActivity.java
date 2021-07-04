@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
                     try {
                         String cameraIdForFlashlight = cameraManager.getCameraIdList()[0];
                     } catch (CameraAccessException exception) {
+                        System.out.println(exception);
                     }
                 }
             }
